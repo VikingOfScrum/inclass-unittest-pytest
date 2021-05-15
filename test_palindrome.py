@@ -1,6 +1,6 @@
 from palindrome import palindrome
 import unittest
-
+#Simple unittest procedures
 class testPalindrome(unittest.TestCase):
     def test_true_statements(self):
         assert palindrome('uWu') is True
@@ -14,6 +14,13 @@ class testPalindrome(unittest.TestCase):
         assert palindrome('choice') is False
         assert palindrome('doggo') is False
         assert palindrome('mississippi') is False
+
+    def test_sentences(self):
+        assert palindrome('evil live') is True
+        assert palindrome('I did did I') is True
+        assert palindrome('murder redrum') is True
+        assert palindrome('not today ton') is False
+        assert palindrome('happy birthday') is False
 
 if __name__ == '__main__':
     unittest.main()
